@@ -1,19 +1,25 @@
 #include <stdio.h>
+#include <conio.h>
+#include <locale.h>
 
-int main()
-{
-    char a[1000];
- 
-    scanf("%999s", a);
+void main(void) {
 
 
+setlocale(LC_ALL, "RUS");
+int c, i, ch;
+i = 0;
+c = 0;
 
-    for (int i = 0; i < 999; i++){
-        if (a[i] == '!'){
-            a[i] = '.';
-        }
-    }
-    printf("%s", a);
-    
-    return 0;
+for (i = 0; i < 7; i++) {
+
+ch = getchar();
+if (ch == "x")
+c++;
+printf ("%c\n", ch);
+
+}
+if (c == 0)
+printf("нет х");
+else
+printf("%d\n", c);
 }
